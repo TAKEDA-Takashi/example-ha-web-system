@@ -1,0 +1,12 @@
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.compose
+    ports:
+      - 8080:8080
+  webapp:
+    build:
+      context: ./webapp
+    ports:
+      - 3000:3000
